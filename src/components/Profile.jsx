@@ -30,9 +30,9 @@ function Profile(props) {
 
   return (
     <div className={styles.imageLayout}>
-      <a href="" onClick={buttonLogoutOnClickHandler}>
+      <button onClick={buttonLogoutOnClickHandler}>
         <img src={imgChoose} alt={img} />
-      </a>
+      </button>
     </div>
   );
 }
