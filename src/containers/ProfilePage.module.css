@@ -1,0 +1,12 @@
+.layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.centerHeader {
+  padding: auto;
+}
+
+.header {
+  width: 100%;
+}

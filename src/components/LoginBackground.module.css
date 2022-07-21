@@ -1,0 +1,26 @@
+.under {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+
+.over {
+  float: right;
+  margin: 0px;
+  top: 0px;
+  z-index: 2;
+}
+
+.container {
+  position: relative;
+}
+.container > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container > img:first-child {
+  float: right;
+  z-index: 2;
+}
