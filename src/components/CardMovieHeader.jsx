@@ -1,25 +1,11 @@
 import React from "react";
-import {
-  Box,
-  Card,
-  CardMedia,
-  CardContent,
-  Typography,
-  Button,
-} from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Box, Card, CardMedia, CardContent, Typography } from "@mui/material";
 
 // Di sini kita mengetahui bahwa nantinya CardMovie akan menerima
 // suatu data dari ListMovie, maka kita langsung saja
 // menerima props di sini
 const CardMovieHeader = (props) => {
   const baseUrlForMovie = "https://image.tmdb.org/t/p/w200";
-
-  const navigate = useNavigate();
-
-  const openVideo = () => {
-    navigate("/MoviePlayer");
-  };
 
   return (
     // di sini kita menggunakan Component Card dari MUI
@@ -47,14 +33,6 @@ const CardMovieHeader = (props) => {
           <Typography component="div" variant="h6">
             {props.movie[0].overview}
           </Typography>
-          {/* <Button
-            variant="contained"
-            size="medium"
-            sx={{ width: 200 }}
-            onClick={openVideo}
-          >
-            Play
-          </Button> */}
         </CardContent>
         <CardMedia
           component="img"

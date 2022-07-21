@@ -18,18 +18,7 @@ import styles from "./LoginOrRegisterForm.module.css";
 const LoginOrRegisterForm = ({ loginOrRegister }) => {
   const navigate = useNavigate();
 
-  // di sini kita akan menggunakan hooks useAuthState
-  // useAuthState ini menerima 2 parameter:
-  // parameter 1: auth (yang kita buat dan export dari firebase)
-  // parameter 2 (optional): options (dalam bentuk object)
-  //    digunakan apabila ingin menggunakan hooks dengan lebih detail (melihat perubahan user)
-  //    (Pada pembelajaran ini tidak digunakan)
-
-  // Mengembalikan 3 data (dalam array)
-  // user: akan mengembalikan auth.User apabila ada yang log in, dan null bila tidak ada
-  // loading: boolean yang digunakan sebagai indikator apakah firebasenya sedang menunggu login
-  // error: bila ada error yang diberikan
-  const [user, isLoading, error] = useAuthState(auth);
+  const [user, isLoading] = useAuthState(auth);
 
   const [credential, setCredential] = useState({
     email: "",
